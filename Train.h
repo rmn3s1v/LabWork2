@@ -1,3 +1,6 @@
+#ifndef TRAIN_H
+#define TRAIN_H
+
 #include <iostream>
 #include <string.h>
 using namespace std;
@@ -15,11 +18,16 @@ public:
     Train(const Train &t); // конструктор копирования
     ~Train(); // деструктор
 
-    void Insert(); // метод вставки (добавление значений)
+    void Extract(); // метод извлечения значения
     void Get(); // метод получения полей
+    string GetTime(); // метод получения поля времени для упорядочивания
+    string GetDestination(); // метод получения пункта назначения
+    string GetTrainNumber(); // метод получения номера поезда
     void Set(); // метод установки значения
     void Change(); // метод редактирования значений
 
     friend ostream &operator<< (ostream &stream, Train t); // перегрузка оператора извлеченния
-    friend iostream &operator>> (istream &stream, Train &t); // перегрузка оператора вставки
+    friend istream &operator>> (istream &stream, Train &t); // перегрузка оператора вставки
 };
+
+#endif
