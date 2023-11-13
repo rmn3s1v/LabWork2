@@ -10,14 +10,14 @@ using namespace std;
 class Store
 {
 private:
-    Train **array;
-    int countElement;
+    Train **array; // массив для хранения значений
+    int countElement; // кол-ва элементов
 
 public:
-    Store();
-    Store(int size);
-    Store(const Store &s);
-    ~Store();
+    Store(); // конструктор по умолчанию
+    Store(int size); // конструктор с параметром
+    Store(const Store &s); // конструктор копирования
+    ~Store(); // деструктор
 
     void SortedArray(); // сортировка после ввода
     void FindTrain(); // поиск по пункту назначения
